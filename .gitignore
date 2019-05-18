@@ -1,0 +1,3 @@
+.env
+magento2/*
+!magento2/.gitkeep
