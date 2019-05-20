@@ -9,19 +9,18 @@ See: [https://devdocs.magento.com/guides/v2.3/install-gde/prereq/prereq-overview
 ## Directory structure
 
 ```yml
-- root/
-  - magento2/ # Storing Magento source code
-  - nginx/
-    - magento.conf # NGINX configuration file for Magento server
-  - php/
-    - conf.d/
-      - php.ini # PHP configuration file
-      - www.conf # PHP-FPM configuration file
-    - composer.auth.json # Storing credentials for Composer private package of Magento
-    - docker-entrypoint.sh # Docker entrypoint file
-    - Dockerfile # Custom PHP-FPM image
-  - .env.sample # A sample of .env file
-  - docker-compose.yml
+-| magento2/ # Storing Magento source code
+-| nginx/
+  -| magento.conf # NGINX configuration file for Magento server
+-| php/
+  -| conf.d/
+    -| php.ini # PHP configuration file
+    -| www.conf # PHP-FPM configuration file
+  -| composer.auth.json # Storing credentials for Composer private package of Magento
+  -| docker-entrypoint.sh # Docker entrypoint file
+  -| Dockerfile # Custom PHP-FPM image
+-| .env.sample # A sample of .env file
+-| docker-compose.yml
 ```
 
 ---
