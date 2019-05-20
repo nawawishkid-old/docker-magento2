@@ -18,23 +18,13 @@ services:
     container_name: magento_php
     command: ["magento-init", "php-fpm"]
     restart: on-failure
+    working_dir: /usr/share/nginx/html
     environment:
       MAGENTO_PUBLIC_KEY: ${MAGENTO_PUBLIC_KEY}
       MAGENTO_SECRET_KEY: ${MAGENTO_SECRET_KEY}
-      MAGENTO_BASE_URL: ${MAGENTO_BASE_URL}
-      MAGENTO_DB_NAME: ${MYSQL_DATABASE:-magento}
-      MAGENTO_DB_USER: ${MYSQL_MAGENTO_USER:-magento}
-      MAGENTO_DB_PASSWORD: ${MYSQL_MAGENTO_PASSWORD:-magento}
-      MAGENTO_BACKEND_FRONTNAME: ${MAGENTO_BACKEND_FRONTNAME}
-      MAGENTO_ADMIN_FIRSTNAME: ${MAGENTO_ADMIN_FIRSTNAME}
-      MAGENTO_ADMIN_LASTNAME: ${MAGENTO_ADMIN_LASTNAME}
-      MAGENTO_ADMIN_EMAIL: ${MAGENTO_ADMIN_EMAIL}
-      MAGENTO_ADMIN_USER: ${MAGENTO_ADMIN_USER}
-      MAGENTO_ADMIN_PASSWORD: ${MAGENTO_ADMIN_PASSWORD}
-      MAGENTO_LANGUAGE: ${MAGENTO_LANGUAGE}
-      MAGENTO_CURRENCY: ${MAGENTO_CURRENCY}
     volumes:
-      - ./magento2:/var/www/html
+      - ./magento2:/usr/share/nginx/html
+      - ./php/conf.d/php.ini:/usr/local/etc/php/conf.d/php.ini
       - ./php/conf.d/www.conf:/usr/local/etc/php-fpm.d/zz-www.conf
 
   mysql:
@@ -46,3 +36,11 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-magento}
       MYSQL_USER: ${MYSQL_MAGENTO_USER:-magento}
       MYSQL_PASSWORD: ${MYSQL_MAGENTO_PASSWORD:-magento}
+
+  adminer:
+    image: adminer
+    restart: on-failure
+    environment:
+      ADMINER_DEFAULT_SERVER: magento_mysql
+    ports:
+      - 9000:8080

@@ -37,41 +37,41 @@ if [ "$1" = "magento-init" ]; then
     chmod u+x bin/magento
     echo "...Done"
 
-    echo "Installing Magento 2..."
-    echo ">> base-url=${MAGENTO_BASE_URL}"
-    echo ">> db-host=${MAGENTO_DB_HOST}"
-    echo ">> db-name=${MAGENTO_DB_NAME}"
-    echo ">> db-user=${MAGENTO_DB_USER}"
-    echo ">> db-password=******"
-    echo ">> backend-frontname=${MAGENTO_BACKEND_FRONTNAME}"
-    echo ">> admin-firstname=${MAGENTO_ADMIN_FIRSTNAME}"
-    echo ">> admin-lastname=${MAGNETO_ADMIN_LASTNAME}"
-    echo ">> admin-email=${MAGENTO_ADMIN_EMAIL}"
-    echo ">> admin-user=${MAGENTO_ADMIN_USER}"
-    echo ">> admin-password=******"
-    echo ">> language=${MAGENTO_LANGUAGE:-en_US}"
-    echo ">> currency=${MAGENTO_CURRENCY:-USD}"
-    echo ">> timezone=${MAGENTO_TIMEZONE:-"Asia/Bangkok"}"
-    echo ">> use-rewrites=1"
+    # echo "Installing Magento 2..."
+    # echo ">> base-url=${MAGENTO_BASE_URL}"
+    # echo ">> db-host=${MAGENTO_DB_HOST}"
+    # echo ">> db-name=${MAGENTO_DB_NAME}"
+    # echo ">> db-user=${MAGENTO_DB_USER}"
+    # echo ">> db-password=******"
+    # echo ">> backend-frontname=${MAGENTO_BACKEND_FRONTNAME}"
+    # echo ">> admin-firstname=${MAGENTO_ADMIN_FIRSTNAME}"
+    # echo ">> admin-lastname=${MAGNETO_ADMIN_LASTNAME}"
+    # echo ">> admin-email=${MAGENTO_ADMIN_EMAIL}"
+    # echo ">> admin-user=${MAGENTO_ADMIN_USER}"
+    # echo ">> admin-password=******"
+    # echo ">> language=${MAGENTO_LANGUAGE:-en_US}"
+    # echo ">> currency=${MAGENTO_CURRENCY:-USD}"
+    # echo ">> timezone=${MAGENTO_TIMEZONE:-"Asia/Bangkok"}"
+    # echo ">> use-rewrites=1"
 
-    bin/magento setup:install \
-      --base-url=${MAGENTO_BASE_URL} \
-      --db-host=${MAGENTO_DB_HOST} \
-      --db-name=${MAGENTO_DB_NAME} \
-      --db-user=${MAGENTO_DB_USER} \
-      --db-password=${MAGENTO_DB_PASSWORD} \
-      --backend-frontname=${MAGENTO_BACKEND_FRONTNAME} \
-      --admin-firstname=${MAGENTO_ADMIN_FIRSTNAME} \
-      --admin-lastname=${MAGNETO_ADMIN_LASTNAME} \
-      --admin-email=${MAGENTO_ADMIN_EMAIL} \
-      --admin-user=${MAGENTO_ADMIN_USER} \
-      --admin-password=${MAGENTO_ADMIN_PASSWORD} \
-      --language=${MAGENTO_LANGUAGE:-en_US} \
-      --currency=${MAGENTO_CURRENCY:-USD} \
-      --timezone=${MAGENTO_TIMEZONE:-"Asia/Bangkok"} \
-      --use-rewrites=1
+    # bin/magento setup:install \
+    #   --base-url=${MAGENTO_BASE_URL} \
+    #   --db-host=${MAGENTO_DB_HOST} \
+    #   --db-name=${MAGENTO_DB_NAME} \
+    #   --db-user=${MAGENTO_DB_USER} \
+    #   --db-password=${MAGENTO_DB_PASSWORD} \
+    #   --backend-frontname=${MAGENTO_BACKEND_FRONTNAME} \
+    #   --admin-firstname=${MAGENTO_ADMIN_FIRSTNAME} \
+    #   --admin-lastname=${MAGNETO_ADMIN_LASTNAME} \
+    #   --admin-email=${MAGENTO_ADMIN_EMAIL} \
+    #   --admin-user=${MAGENTO_ADMIN_USER} \
+    #   --admin-password=${MAGENTO_ADMIN_PASSWORD} \
+    #   --language=${MAGENTO_LANGUAGE:-en_US} \
+    #   --currency=${MAGENTO_CURRENCY:-USD} \
+    #   --timezone=${MAGENTO_TIMEZONE:-"Asia/Bangkok"} \
+    #   --use-rewrites=1
 
-    echo "...Done"
+    # echo "...Done"
   else
     echo "Magento has already been installed"
   fi
