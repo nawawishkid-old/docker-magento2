@@ -31,19 +31,15 @@ See: [https://devdocs.magento.com/guides/v2.3/install-gde/prereq/prereq-overview
 
 2. Put the keys in newly created `.env` file. See `.env.sample` as an example.
 
-3. Run:
+3. Run `docker-compose up -d`
 
-```bash
-docker-compose up -d
-```
-
-4. Waiting while `Composer` creating Magento project. set You can see progress log by running `docker logs -f magento_php`
+4. Waiting while `Composer` creating Magento project. You can see progress log by running `docker logs -f magento_php`
 
 5. After finish installation, go to `http://localhost:8888`. You'll be taken to Magento Setup Wizard to setup Magento.
 
 ---
 
-## Note
+## Notes
 
 - Magento 2 Setup Wizard อาจจะแสดง installation progress ค้างอยู่ที่จุดใดจุดหนึ่ง ไม่ครบ 100% แต่ไม่ได้หมายความว่า installation ไม่สมบูรณ์ ให้อ่าน file `<magento_root_directory>/var/log/install.log` ประกอบ หากเจอคำว่า `'SUCCESS'` แปลว่า install เสร็จแล้ว ให้กลับไปหน้า home ของ website ได้เลย
 
