@@ -1,10 +1,12 @@
-# Magento prerequisites and configurations
+# Setting up Magento 2 using Docker
+
+## Magento prerequisites and configurations
 
 See: [https://devdocs.magento.com/guides/v2.3/install-gde/prereq/prereq-overview.html](https://devdocs.magento.com/guides/v2.3/install-gde/prereq/prereq-overview.html)
 
 ---
 
-# Directory structure
+## Directory structure
 
 ```yml
 - root/
@@ -24,7 +26,7 @@ See: [https://devdocs.magento.com/guides/v2.3/install-gde/prereq/prereq-overview
 
 ---
 
-# Instructions
+## Instructions
 
 1. Get Magento's authentication keys. See [https://devdocs.magento.com/guides/v2.3/install-gde/prereq/connect-auth.html](https://devdocs.magento.com/guides/v2.3/install-gde/prereq/connect-auth.html)
 
@@ -42,7 +44,7 @@ docker-compose up -d
 
 ---
 
-# Note
+## Note
 
 - Magento 2 Setup Wizard อาจจะแสดง installation progress ค้างอยู่ที่จุดใดจุดหนึ่ง ไม่ครบ 100% แต่ไม่ได้หมายความว่า installation ไม่สมบูรณ์ ให้อ่าน file `<magento_root_directory>/var/log/install.log` ประกอบ หากเจอคำว่า `'SUCCESS'` แปลว่า install เสร็จแล้ว ให้กลับไปหน้า home ของ website ได้เลย
 
