@@ -2,11 +2,7 @@
 
 See: [https://devdocs.magento.com/guides/v2.3/install-gde/prereq/prereq-overview.html](https://devdocs.magento.com/guides/v2.3/install-gde/prereq/prereq-overview.html)
 
-# Instruction
-
-```bash
-docker-compose up -d
-```
+---
 
 # Directory structure
 
@@ -25,6 +21,26 @@ docker-compose up -d
   - .env.sample # A sample of .env file
   - docker-compose.yml
 ```
+
+---
+
+# Instructions
+
+1. Get Magento's authentication keys. See [https://devdocs.magento.com/guides/v2.3/install-gde/prereq/connect-auth.html](https://devdocs.magento.com/guides/v2.3/install-gde/prereq/connect-auth.html)
+
+2. Put the keys in newly created `.env` file. See `.env.sample` as an example.
+
+3. Run:
+
+```bash
+docker-compose up -d
+```
+
+4. Waiting while `Composer` creating Magento project. set You can see progress log by running `docker logs -f magento_php`
+
+5. After finish installation, go to `http://localhost:8888`. You'll be taken to Magento Setup Wizard to setup Magento.
+
+---
 
 # Note
 

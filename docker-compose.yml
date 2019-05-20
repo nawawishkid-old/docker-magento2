@@ -11,7 +11,7 @@ services:
       - ./magento2:/usr/share/nginx/html
       - ./nginx/magento.conf:/etc/nginx/conf.d/default.conf
     ports:
-      - 8888:80
+      - ${MAGENTO_PORT:-8888}:80
 
   php-fpm:
     build: ./php
